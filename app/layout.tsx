@@ -4,7 +4,10 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "")}>{children}</body>
+      <body className={cn(inter.className)}>{children}</body>
     </html>
   );
 }
